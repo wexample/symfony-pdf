@@ -30,7 +30,7 @@ use function strtolower;
 use function substr;
 use function unlink;
 
-abstract class PdfService
+abstract class AbstractPdfService
 {
     public const OUTPUT_ACTION_PRINT = 'print';
 

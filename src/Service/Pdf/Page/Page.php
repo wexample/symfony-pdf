@@ -6,7 +6,7 @@ use App\Pdf\PdfDocument;
 use JetBrains\PhpStorm\ArrayShape;
 use TCPDF;
 use Wexample\SymfonyHelpers\Helper\DomHelper;
-use Wexample\SymfonyPdf\Service\Pdf\PdfService;
+use Wexample\SymfonyPdf\Service\Pdf\AbstractPdfService;
 use function implode;
 use function is_file;
 use function str_repeat;
@@ -31,7 +31,7 @@ abstract class Page
 
     public ?PdfDocument $document = null;
 
-    protected PdfService $pdfService;
+    protected AbstractPdfService $pdfService;
 
     protected const RENDER_OPTION_ALIGN = 'align';
 
@@ -239,12 +239,12 @@ abstract class Page
         return $this->y;
     }
 
-    public function getPdfService(): PdfService
+    public function getPdfService(): AbstractPdfService
     {
         return $this->pdfService;
     }
 
-    public function setPdfService(PdfService $pdfService)
+    public function setPdfService(AbstractPdfService $pdfService)
     {
         $this->pdfService = $pdfService;
         $this->document = $pdfService->document;
