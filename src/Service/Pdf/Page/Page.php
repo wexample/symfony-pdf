@@ -166,15 +166,13 @@ abstract class Page
             );
         }
 
-        if (isset($data[self::RENDER_OPTION_LETTER_SPACING])) {
-            $data[self::RENDER_OPTION_CONTENT] = implode(
-                str_repeat(
-                    DomHelper::CHAR_NBSP,
-                    $data[self::RENDER_OPTION_LETTER_SPACING]
-                ),
-                str_split($data[self::RENDER_OPTION_CONTENT] ?: '')
-            );
-        }
+        $data[self::RENDER_OPTION_CONTENT] = implode(
+            str_repeat(
+                DomHelper::CHAR_NBSP,
+                $data[self::RENDER_OPTION_LETTER_SPACING]
+            ),
+            str_split($data[self::RENDER_OPTION_CONTENT] ?: '')
+        );
 
         if (isset($data[self::RENDER_OPTION_NBSP]) ?? false) {
             $data[self::RENDER_OPTION_CONTENT] = str_replace(
