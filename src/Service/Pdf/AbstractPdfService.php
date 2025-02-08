@@ -14,7 +14,7 @@ use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Loader\FilesystemLoader;
 use Wexample\SymfonyHelpers\Helper\FileHelper;
-use Wexample\SymfonyHelpers\Helper\TextHelper;
+use Wexample\Helpers\Helper\TextHelper;
 use Wexample\SymfonyPdf\Service\Pdf\Page\Page;
 use function class_exists;
 use function dirname;
