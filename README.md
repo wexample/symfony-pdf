@@ -4,6 +4,31 @@ Version: 1.0.58
 
 Pdf helpers for Symfony
 
+## Table of Contents
+
+- [Api Reference](#api-reference)
+- [Code Quality](#code-quality)
+- [Versioning](#versioning)
+- [Changelog](#changelog)
+- [Migration Notes](#migration-notes)
+- [Security](#security)
+- [Privacy](#privacy)
+- [Support](#support)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Maintainers](#maintainers)
+- [License](#license)
+- [Suite Integration](#suite-integration)
+- [Compatibility Matrix](#compatibility-matrix)
+- [Dependencies](#dependencies)
+- [Suite Signature](#suite-signature)
+
+
+## API Reference
+
+Full API documentation is available in the source code docstrings.
+
+Key modules and classes are documented with type hints for better IDE support.
+
 ## Code Quality & Typing
 
 All the suite packages follow strict quality standards:
@@ -95,6 +120,17 @@ This package is part of the **Wexample Suite** — a collection of high-quality 
 The suite includes packages for configuration management, file handling, prompts, and more. Each package can be used independently or as part of the integrated suite.
 
 Visit the [Wexample Suite documentation](https://docs.wexample.com) for the complete package ecosystem.
+
+## Compatibility Matrix
+
+This package is part of the Wexample suite and is compatible with other suite packages.
+
+Refer to each package's documentation for specific version compatibility requirements.
+
+## Dependencies
+
+- wexample/symfony-helpers: ^1.0.64
+
 
 # About us
 
