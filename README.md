@@ -1,6 +1,6 @@
 # wexample/symfony-pdf
 
-Version: 1.0.60
+Version: 1.0.61
 
 Pdf helpers for Symfony
 
