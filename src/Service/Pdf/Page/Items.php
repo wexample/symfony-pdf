@@ -2,11 +2,12 @@
 
 namespace Wexample\SymfonyPdf\Service\Pdf\Page;
 
-use JetBrains\PhpStorm\Pure;
-use TCPDF;
 use function array_slice;
 use function count;
 use function floor;
+
+use JetBrains\PhpStorm\Pure;
+use TCPDF;
 
 abstract class Items extends Page
 {
@@ -28,7 +29,7 @@ abstract class Items extends Page
     {
         $items = $this->getItems();
 
-        if (!empty($items)) {
+        if (! empty($items)) {
             $this->renderListHeader($pdf);
         }
 
@@ -39,7 +40,7 @@ abstract class Items extends Page
 
         $rest = array_slice($items, $maxItems);
         $items = array_slice($items, 0, $maxItems);
-        $end = !count($rest);
+        $end = ! count($rest);
 
         foreach ($items as $item) {
             $this->renderItem($pdf, $item, $y);
@@ -47,7 +48,7 @@ abstract class Items extends Page
             $y += $this->itemHeight;
         }
 
-        if (!$end) {
+        if (! $end) {
             // New page.
             /** @var Items $page */
             $page = new $this->listClass($rest);

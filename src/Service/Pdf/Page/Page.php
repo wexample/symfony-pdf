@@ -3,17 +3,21 @@
 namespace Wexample\SymfonyPdf\Service\Pdf\Page;
 
 use App\Pdf\PdfDocument;
-use JetBrains\PhpStorm\ArrayShape;
-use TCPDF;
-use Wexample\SymfonyHelpers\Helper\DomHelper;
-use Wexample\SymfonyPdf\Service\Pdf\AbstractPdfService;
+
 use function implode;
 use function is_file;
+
+use JetBrains\PhpStorm\ArrayShape;
+
 use function str_repeat;
 use function str_replace;
 use function str_split;
 use function strtoupper;
 use function substr;
+
+use TCPDF;
+use Wexample\SymfonyHelpers\Helper\DomHelper;
+use Wexample\SymfonyPdf\Service\Pdf\AbstractPdfService;
 
 abstract class Page
 {

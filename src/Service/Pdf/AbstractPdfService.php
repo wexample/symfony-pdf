@@ -4,20 +4,12 @@ namespace Wexample\SymfonyPdf\Service\Pdf;
 
 use App\Pdf\PdfDocument;
 use App\Wex\BaseBundle\Translation\Translator;
-use Exception;
-use Spatie\PdfToImage\Exceptions\PdfDoesNotExist;
-use Spatie\PdfToImage\Pdf;
-use Symfony\Component\HttpKernel\KernelInterface;
-use TCPDF;
-use TCPDF_FONTS;
-use Twig\Environment;
-use Twig\Error\LoaderError;
-use Twig\Loader\FilesystemLoader;
-use Wexample\SymfonyHelpers\Helper\FileHelper;
-use Wexample\Helpers\Helper\TextHelper;
-use Wexample\SymfonyPdf\Service\Pdf\Page\Page;
+
 use function class_exists;
 use function dirname;
+
+use Exception;
+
 use function file_exists;
 use function is_dir;
 use function is_file;
@@ -25,10 +17,26 @@ use function mkdir;
 use function pathinfo;
 use function realpath;
 use function scandir;
+
+use Spatie\PdfToImage\Exceptions\PdfDoesNotExist;
+use Spatie\PdfToImage\Pdf;
+
 use function strlen;
 use function strtolower;
 use function substr;
+
+use Symfony\Component\HttpKernel\KernelInterface;
+use TCPDF;
+use TCPDF_FONTS;
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Loader\FilesystemLoader;
+
 use function unlink;
+
+use Wexample\Helpers\Helper\TextHelper;
+use Wexample\SymfonyHelpers\Helper\FileHelper;
+use Wexample\SymfonyPdf\Service\Pdf\Page\Page;
 
 abstract class AbstractPdfService
 {
@@ -248,7 +256,7 @@ abstract class AbstractPdfService
         $dir = $this->generateDir();
 
         // Create directory.
-        if (!file_exists($dir)) {
+        if (! file_exists($dir)) {
             mkdir($dir, 0755, true);
         }
 
@@ -356,17 +364,17 @@ abstract class AbstractPdfService
         $pdfPreviewAbsolutePath = $this->generatePreviewAbsolutePath();
 
         // Image file does not exist.
-        if (!is_file($pdfPreviewAbsolutePath)) {
+        if (! is_file($pdfPreviewAbsolutePath)) {
             $pdfAbsolutePath = $this->getFileAbsolutePath();
 
-            if (!is_file($pdfAbsolutePath)) {
+            if (! is_file($pdfAbsolutePath)) {
                 // No pdf.
                 return null;
             }
 
             $pdfPreviewAbsoluteDir = dirname($pdfPreviewAbsolutePath);
 
-            if (!is_dir($pdfPreviewAbsoluteDir)) {
+            if (! is_dir($pdfPreviewAbsoluteDir)) {
                 mkdir($pdfPreviewAbsoluteDir, 0777, true);
             }
 
