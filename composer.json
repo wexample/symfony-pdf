@@ -1,21 +1,21 @@
 {
-    "name": "wexample/symfony-pdf",
-    "description": "Pdf helpers for Symfony",
-    "type": "library",
-    "license": "MIT",
-    "version": "1.0.82",
-    "autoload": {
-        "psr-4": {
-            "Wexample\\SymfonyPdf\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "weeger",
-            "email": "romain.weeger@wexample.com"
-        }
-    ],
-    "require": {
-        "wexample/symfony-helpers": "*"
+  "name": "wexample/symfony-pdf",
+  "description": "Pdf helpers for Symfony",
+  "type": "library",
+  "license": "MIT",
+  "version": "1.0.83",
+  "autoload": {
+    "psr-4": {
+      "Wexample\\SymfonyPdf\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "weeger",
+      "email": "romain.weeger@wexample.com"
+    }
+  ],
+  "require": {
+    "wexample/symfony-helpers": "1.0.89"
+  }
 }
