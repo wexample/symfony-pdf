@@ -1,11 +1,12 @@
 docker:
   db: {}
 domains: []
+git:
+  publication_strategy: main_push
 global:
   name: symfony_pdf
   type: app
-  version: 1.0.87
+  version: 1.0.88
 wex:
-  version: 6.0.89
-git:
-  publication_strategy: main_push
+  migration: 1
+  version: 6.0.90
