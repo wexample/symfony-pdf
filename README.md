@@ -1,6 +1,6 @@
 # symfony_pdf
 
-Version: 1.0.89
+Version: 1.0.90
 
 Pdf helpers for Symfony
 
@@ -27,7 +27,7 @@ Visit the [Wexample Suite documentation](https://docs.wexample.com) for the comp
 
 ## Dependencies
 
-- wexample/symfony-helpers: >=2.0.0
+- wexample/symfony-helpers: *
 
 ## Versioning & Compatibility Policy
 
