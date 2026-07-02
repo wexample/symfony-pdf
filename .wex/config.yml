@@ -6,7 +6,7 @@ git:
 global:
   name: symfony_pdf
   type: app
-  version: 1.0.91
+  version: 1.0.92
 wex:
   migration: 1
   version: 6.0.112
