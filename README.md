@@ -1,6 +1,6 @@
 # symfony_pdf
 
-Version: 1.0.97
+Version: 1.0.98
 
 `wexample/symfony-pdf` is a Symfony bundle that wraps TCPDF to let backend developers generate structured PDF documents from Twig templates. It provides `AbstractPdfService` as a base to extend for each document type — covering layout dimensions, font loading, page assembly, and output as inline stream, download, or saved file — alongside abstract `Page` and `Items` classes that split rendering into header, body, and footer lifecycle methods with automatic multi-page pagination for item lists.
 
@@ -131,7 +131,8 @@ Visit the [Wexample Suite documentation](https://docs.wexample.com) for the comp
 
 ## Dependencies
 
-- wexample/symfony-helpers: >=7.0.0
+- php: >=8.5
+- wexample/symfony-helpers: >=8.0.0
 
 ## Versioning & Compatibility Policy
 
