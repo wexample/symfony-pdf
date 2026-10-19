@@ -26,6 +26,7 @@ use function strtolower;
 use function substr;
 
 use Symfony\Component\HttpKernel\KernelInterface;
+use Symfony\Contracts\Service\ResetInterface;
 use TCPDF;
 use TCPDF_FONTS;
 use Twig\Environment;
@@ -37,7 +38,6 @@ use function unlink;
 use Wexample\Helpers\Helper\TextHelper;
 use Wexample\SymfonyHelpers\Helper\FileHelper;
 use Wexample\SymfonyPdf\Service\Pdf\Page\Page;
-use Symfony\Contracts\Service\ResetInterface;
 
 abstract class AbstractPdfService implements ResetInterface
 {
