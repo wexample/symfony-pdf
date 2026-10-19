@@ -37,8 +37,9 @@ use function unlink;
 use Wexample\Helpers\Helper\TextHelper;
 use Wexample\SymfonyHelpers\Helper\FileHelper;
 use Wexample\SymfonyPdf\Service\Pdf\Page\Page;
+use Symfony\Contracts\Service\ResetInterface;
 
-abstract class AbstractPdfService
+abstract class AbstractPdfService implements ResetInterface
 {
     public const OUTPUT_ACTION_PRINT = 'print';
 
@@ -102,6 +103,17 @@ abstract class AbstractPdfService
         $loader->addPath($bundlePath.'Resources/templates');
 
         $this->useFontsDir($this->projectDir.'assets/fonts/Quicksand/');
+    }
+
+    /**
+     * A document is drawn for one request: the next one starts from a blank one.
+     */
+    public function reset(): void
+    {
+        $this->pageCurrent = null;
+        $this->pages = [];
+        $this->document = null;
+        $this->renderedPdf = null;
     }
 
     /**
