@@ -3,7 +3,7 @@
   "description": "Pdf helpers for Symfony",
   "type": "library",
   "license": "MIT",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "autoload": {
     "psr-4": {
       "Wexample\\SymfonyPdf\\": "src/"
@@ -17,7 +17,7 @@
   ],
   "require": {
     "php": ">=8.5",
-    "wexample/symfony-helpers": ">=17.0.0"
+    "wexample/symfony-helpers": ">=18.0.2"
   },
   "extra": {
     "install": {
