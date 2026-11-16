@@ -1,6 +1,6 @@
 # symfony_pdf
 
-Version: 1.1.4
+Version: 1.1.5
 
 Pdf helpers for Symfony
 
